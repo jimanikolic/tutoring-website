@@ -59,20 +59,59 @@ section#order {
     padding: 20px;
 }
 
-.doughnut-item {
-    margin-bottom: 20px;
-}
-
-.doordash-link {
-    margin-top: 30px;
+header {
+    background: linear-gradient(to right, #ff0800, #f04040);
+    color: #fff;
+    padding: 10px;
     text-align: center;
 }
 
-.doordash-link a {
-    display: inline-block;
-    background-color: #4285f4;
+header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer {
+    background: linear-gradient(to right, #ff0800, #f04040);
     color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+nav a {
+    display: inline-block;
     padding: 10px 20px;
+    margin: 0 10px;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
     border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #bd5d03;
+}
+
+section {
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section#home {
+    background-color: #f8f8f8;
+}
+
+section#order {
+    background-color: #ececec;
 }

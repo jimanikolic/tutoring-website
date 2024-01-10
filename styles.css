@@ -68,28 +68,28 @@ nav ul li {
 
 nav a {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 0 4px;
+    padding: 3px 10px;
+    margin: 0px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     border: 2px solid #fff;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 nav a:hover {
     background-color: #fff;
-    color: #bd5d03;
+    color: #ff0000;
 }
 
 /* Section Styles */
 section {
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
 }
 
 section#home {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 section#order {

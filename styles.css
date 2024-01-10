@@ -11,7 +11,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav a {
@@ -28,16 +28,6 @@ html {
     scroll-behavior: smooth;
 }
 
-section#home img {
-    width: 30%; /* Make the image take up the full width of its container */
-    max-width: 600px; /* Limit the maximum width of the image */
-    height: auto; /* Maintain the aspect ratio when resizing */
-    display: block; /* Ensure the image is treated as a block element */
-    margin: 0 auto; /* Center the image horizontally within its container */
-}
-
-/* Add these styles to your existing styles.css file */
-
 section#order {
     padding: 20px;
 }
@@ -51,7 +41,7 @@ header {
 
 header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -73,12 +63,12 @@ footer {
 nav a {
     display: inline-block;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 0 4px;
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     border: 2px solid #fff;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 nav a:hover {

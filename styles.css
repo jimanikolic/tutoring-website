@@ -95,3 +95,27 @@ section#home {
 section#order {
     background-color: #ececec;
 }
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    display: inline-block;
+    background-color: #5271ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.selfie {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+

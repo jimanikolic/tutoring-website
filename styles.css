@@ -1,80 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Body */
+body {
+    font-family: Arial, sans-serif;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-section#order {
-    padding: 20px;
-}
-
+/* Header */
 header {
     background: linear-gradient(to right, #5271ff, #7890fa);
-    color: #ffffff;
-    padding: 1px; /* Adjust the padding values as needed */
+    color: #fff;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 10px;
     font-size: 22px;
     font-weight: bold;
 }
 
-/* Combined Footer Styles */
-footer {
-    background: linear-gradient(to right, #ff0800, #f04040);
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
-}
-
-/* Navigation Styles */
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;       /* IMPORTANT: allows wrapping on mobile */
+    gap: 10px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+nav li {
+    margin: 0;
 }
 
 nav a {
-    display: inline-block;
-    padding: 3px 10px;
-    margin: 0px;
+    padding: 6px 14px;
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
     border: 2px solid #fff;
     border-radius: 100px;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -82,40 +48,82 @@ nav a:hover {
     color: #5271ff;
 }
 
-/* Section Styles */
+/* Sections */
 section {
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    margin: 20px auto;
+    max-width: 900px;     
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
 }
 
-section#home {
-    background-color: #ffffff;
-}
-
+/* Special Section Colors (optional) */
 section#order {
-    background-color: #ececec;
+    background: #ececec;
 }
+
+/* About Page Layout */
 .about-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+/* Image Container */
 .image-container {
-    display: inline-block;
     background-color: #5271ff;
     padding: 10px;
     border-radius: 10px;
-}
-
-.selfie {
-    display: block;
+    max-width: 300px;
     margin: 0 auto;
 }
 
+/* Selfie Image (IMPORTANT) */
+.selfie {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
+/* Footer */
+footer {
+    background: linear-gradient(to right, #ff0800, #f04040);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+}
 
+/* Add bottom padding so footer doesn’t overlap content */
+body {
+    padding-bottom: 70px;
+}
 
+/* ------------ RESPONSIVE BREAKPOINTS ------------- */
 
+/* Phones */
+@media (max-width: 600px) {
+    header {
+        font-size: 18px;
+        padding: 15px 5px;
+    }
+
+    nav a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .image-container {
+        max-width: 250px;
+    }
+}

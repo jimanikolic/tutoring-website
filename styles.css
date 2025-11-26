@@ -1,216 +1,238 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ============================
+   Jim's Tutoring — Clean CSS
+   ============================ */
+
+/* ---------- Reset / Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --accent: #5271ff;
+  --accent-2: #7890fa;
+  --muted-bg: #f7f8ff;
+  --card-bg: #ffffff;
+  --text: #12213a;
+  --section-radius: 14px;
+  --max-width: 1000px;
 }
 
-/* Body */
+html, body {
+  height: 100%;
+}
+
 body {
-    font-family: "Inter", Arial, sans-serif;
-    line-height: 1.7;
-    padding-bottom: 80px; /* prevent footer overlap */
-    background: #f7f8ff;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--muted-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 100px; /* room for fixed footer */
 }
 
-/* Header with smooth curve + shadow */
+/* ---------- Header / Nav ---------- */
 header {
-    background: linear-gradient(to bottom right, #5271ff, #7890fa);
-    color: #fff;
-    text-align: center;
-    padding: 40px 10px 50px;
-    font-size: 28px;
-    font-weight: 700;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  text-align: center;
+  padding: 36px 14px 46px;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 0; /* explicit: no rounded corners */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-/* Navigation */
+header h1 { line-height: 1; margin-bottom: 6px; }
+
+/* navigation */
+nav {
+  margin-top: 12px;
+}
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
-    padding: 8px 18px;
-    text-decoration: none;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    border-radius: 100px;
-    font-weight: 600;
-    transition: 0.2s;
-    font-size: 1.05rem;
+  display: inline-block;
+  padding: 8px 18px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background-color .18s, color .18s, transform .08s;
+  font-size: 1.03rem;
 }
 
-nav a:hover {
-    background-color: #fff;
-    color: #5271ff;
+nav a:hover,
+nav a:focus {
+  background-color: #fff;
+  color: var(--accent);
+  outline: none;
+  transform: translateY(-1px);
 }
 
-/* Section Container */
+/* ---------- Section / Content Cards ---------- */
+.section {
+  /* helper class if you want it, not required */
+}
+
 section {
-    padding: 35px 30px;
-    margin: 55px auto;
-    max-width: 900px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-radius: 18px;
+  background: var(--card-bg);
+  max-width: calc(var(--max-width));
+  margin: 48px auto;
+  padding: 32px 28px;
+  border-radius: var(--section-radius);
+  box-shadow: 0 6px 18px rgba(15, 23, 60, 0.06);
 }
 
-/* Alternate section color (optional) */
+/* alternate faint tint for visual rhythm */
 section:nth-of-type(odd) {
-    background: #fdfdff;
+  background: #fcfcff;
 }
 
-/* Headings */
+/* headings */
 h1, h2, h3 {
-    margin-bottom: 25px;
-    font-weight: 600;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: #0f1b3a;
 }
 
 h2 {
-    font-size: 1.9rem;
-    color: #2f3bff;
-    letter-spacing: 0.4px;
+  font-size: 1.9rem;
+  color: #2f3bff;
+  letter-spacing: 0.3px;
 }
 
-/* Paragraph spacing */
-p {
-    margin-bottom: 20px;
-}
+/* text spacing */
+p { margin-bottom: 16px; font-size: 1.02rem; }
+ul { margin: 0; padding-left: 20px; }
+ul li { margin-bottom: 8px; }
 
-/* Lists */
+/* emphasized group headings */
 strong {
-    display: block;
-    margin-top: 28px;
-    margin-bottom: 10px;
-    font-size: 1.25rem;
-    font-weight: 600;
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 1.12rem;
 }
 
-ul li {
-    margin-bottom: 8px;
+/* subtle rule */
+hr { border: none; height: 1px; background: #e9ecff; margin: 28px 0; }
+
+/* ---------- ABOUT: two-column layout ---------- */
+.about-section {
+  /* wrapper can reuse the normal section element */
 }
 
-/* About image container */
-.image-container {
-    background-color: #5271ff;
-    padding: 12px;
-    border-radius: 15px;
-    max-width: 260px;
-    margin: 0 auto 20px;
-}
-
-.selfie {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(to right, #ff0800, #f04040);
-    color: #fff;
-    text-align: center;
-    padding: 14px;
-    width: 100%;
-    font-size: 16px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-/* Small Screens */
-@media (max-width: 600px) {
-    header {
-        padding: 25px 10px 35px;
-        font-size: 22px;
-    }
-
-    nav a {
-        padding: 6px 14px;
-        font-size: 0.9rem;
-    }
-
-    section {
-        padding: 25px 18px;
-        margin: 30px 10px;
-    }
-}
-/* -------- TWO-COLUMN ABOUT SECTION -------- */
-
+/* container that holds image + text */
 .about-container {
-    display: flex;
-    flex-direction: row;     /* ensures image is on LEFT */
-    gap: 35px;
-    align-items: center;
-    justify-content: center;
-    max-width: 900px;
-    margin: auto;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: calc(var(--max-width) - 80px);
+  margin: 0 auto;
 }
 
-/* Image column */
+/* left column (image) */
 .about-image {
-    flex: 0 0 230px;         /* fixes image column width */
-    display: flex;
-    justify-content: center;
+  flex: 0 0 220px;           /* fixed-ish left column width on desktop */
+  display: flex;
+  justify-content: flex-start; /* left-align in the column */
+  align-items: flex-start;
 }
 
-/* Make the image smaller */
+/* image card */
 .about-image .image-container {
-    max-width: 200px;        /* <<< smaller size here */
-    padding: 8px;
-    border-radius: 12px;
+  background-color: var(--accent);
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 180px;          /* final visual size for selfie */
+  margin: 0;                 /* ensure not centered by default rules */
 }
 
-/* About text column */
-.about-text {
-    flex: 1;
-    font-size: 1.07rem;
-}
-
-/* Image styling */
 .selfie {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-/* MOBILE: stack vertically */
-@media (max-width: 800px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
+/* right column (text) */
+.about-text { flex: 1; font-size: 1.03rem; }
 
-    .about-image {
-        flex: unset;
-    }
-}
-
-/* -------- TWO-COLUMN COURSE LISTS -------- */
-
+/* ---------- COURSE LIST: two-column grid ---------- */
 .course-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px 35px;   /* vertical spacing, horizontal spacing */
-    padding-left: 20px;  /* indent like a normal list */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 36px;
+  padding-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
-.course-list li {
-    margin-bottom: 6px;
+.course-list li { margin-bottom: 6px; }
+
+/* ---------- Footer ---------- */
+footer {
+  background: linear-gradient(90deg, #ff0800, #f04040);
+  color: #fff;
+  text-align: center;
+  padding: 14px 12px;
+  width: 100%;
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -4px 14px rgba(0,0,0,0.08);
 }
 
-/* MOBILE: collapse to one column */
+/* prevent footer overlap for small content pages */
+.footer-space {
+  height: 86px; /* optional spacer div if you want an explicit gap */
+}
+
+/* ---------- Utilities ---------- */
+.container-center { max-width: calc(var(--max-width)); margin: 0 auto; padding: 0 18px; }
+
+/* accessibility focus ring */
+a:focus { outline: 3px solid rgba(82,113,255,0.18); outline-offset: 3px; }
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+
+/* small screens - phones */
 @media (max-width: 700px) {
-    .course-list {
-        grid-template-columns: 1fr;
-        padding-left: 15px;
-    }
+  header { padding: 24px 10px 34px; font-size: 22px; }
+  nav a { padding: 6px 12px; font-size: 0.95rem; }
+  section { margin: 22px 12px; padding: 20px 16px; border-radius: 12px; }
+  .about-container { flex-direction: column; gap: 20px; text-align: center; }
+  .about-image { justify-content: center; }
+  .about-image .image-container { max-width: 220px; }
+  .course-list { grid-template-columns: 1fr; padding-left: 14px; gap: 10px 18px; }
 }
+
+/* medium screens - tablets */
+@media (min-width: 701px) and (max-width: 1024px) {
+  section { max-width: 780px; padding: 26px; margin: 36px auto; }
+  .about-container { gap: 28px; }
+}
+
+/* large screens - desktop */
+@media (min-width: 1025px) {
+  section { max-width: var(--max-width); padding: 36px 40px; margin: 56px auto; }
+  .about-container { gap: 36px; align-items: center; }
+  .about-image { flex: 0 0 220px; }
+  .about-image .image-container { max-width: 180px; }
+  .course-list { grid-template-columns: repeat(2, 1fr); gap: 8px 36px; padding-left: 20px; }
+}
+
+/* ---------- End of stylesheet ---------- */

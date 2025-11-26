@@ -15,12 +15,10 @@ body {
 /* Header */
 header {
     background: linear-gradient(to right, #5271ff, #7890fa);
-    color: #fff;
-    text-align: center;
-    padding: 25px 10px;
-    font-size: 22px;
-    font-weight: bold;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
+
 
 /* Navigation */
 nav ul {

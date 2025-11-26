@@ -7,7 +7,9 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
+    padding-bottom: 70px; /* room for fixed footer */
 }
 
 /* Header */
@@ -15,7 +17,7 @@ header {
     background: linear-gradient(to right, #5271ff, #7890fa);
     color: #fff;
     text-align: center;
-    padding: 20px 10px;
+    padding: 25px 10px;
     font-size: 22px;
     font-weight: bold;
 }
@@ -23,15 +25,11 @@ header {
 /* Navigation */
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;       /* IMPORTANT: allows wrapping on mobile */
-    gap: 10px;
-}
-
-nav li {
-    margin: 0;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
 }
 
 nav a {
@@ -50,20 +48,19 @@ nav a:hover {
 
 /* Sections */
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;     
+    margin: 40px auto;
+    padding: 30px 25px;
+    max-width: 850px;
     background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 12px;
 }
 
-/* Special Section Colors (optional) */
-section#order {
-    background: #ececec;
+section:nth-of-type(odd) {
+    background: #fafbff;
 }
 
-/* About Page Layout */
+/* About section */
 .about-section {
     display: flex;
     flex-direction: column;
@@ -71,7 +68,6 @@ section#order {
     text-align: center;
 }
 
-/* Image Container */
 .image-container {
     background-color: #5271ff;
     padding: 10px;
@@ -80,11 +76,44 @@ section#order {
     margin: 0 auto;
 }
 
-/* Selfie Image (IMPORTANT) */
-.selfie {
+img.selfie {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+}
+
+/* Typography spacing */
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #2f3bff;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+strong {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #e0e4ff;
+    margin: 30px 0;
 }
 
 /* Footer */
@@ -97,11 +126,6 @@ footer {
     font-size: 16px;
     position: fixed;
     bottom: 0;
-}
-
-/* Add bottom padding so footer doesn’t overlap content */
-body {
-    padding-bottom: 70px;
 }
 
 /* ------------ RESPONSIVE BREAKPOINTS ------------- */
@@ -127,82 +151,21 @@ body {
         max-width: 250px;
     }
 }
-/* Add nice spacing between sections */
-section {
-    margin: 40px auto;
-}
 
-/* Add extra spacing under headings */
-h1, h2, h3 {
-    margin-bottom: 20px;
-}
+/* Desktop improvements */
+@media (min-width: 900px) {
+    header {
+        padding: 40px 20px;
+        font-size: 28px;
+    }
 
-/* Add spacing between paragraphs */
-p {
-    margin-bottom: 18px;
-}
+    nav ul {
+        margin-top: 20px;
+    }
 
-/* Add spacing above list groups */
-strong {
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 8px;
+    section {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 40px 35px;
+    }
 }
-
-/* Add spacing between list items */
-ul li {
-    margin-bottom: 6px;
-}
-section {
-    padding: 30px 25px;
-    border-radius: 10px;
-}
-section {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-body {
-    font-family: "Inter", Arial, sans-serif;
-    line-height: 1.7;
-}
-section:nth-of-type(odd) {
-    background: #fafbff;
-}
-
-section:nth-of-type(even) {
-    background: #ffffff;
-}
-section {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-section {
-    border-radius: 12px;
-}
-img.selfie {
-    border-radius: 12px;
-}
-nav ul {
-    gap: 15px;
-    margin-top: 10px;
-}
-header {
-    padding-bottom: 25px;
-}
-h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
-    color: #2f3bff;
-}
-hr {
-    border: none;
-    height: 1px;
-    background: #e0e4ff;
-    margin: 30px 0;
-}
-
-
-
-

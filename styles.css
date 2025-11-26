@@ -9,34 +9,43 @@
 body {
     font-family: "Inter", Arial, sans-serif;
     line-height: 1.7;
-    padding-bottom: 70px; /* room for fixed footer */
+    padding-bottom: 80px; /* prevent footer overlap */
+    background: #f7f8ff;
 }
 
-/* Header */
+/* Header with smooth curve + shadow */
 header {
-    background: linear-gradient(to right, #5271ff, #7890fa);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    background: linear-gradient(to bottom right, #5271ff, #7890fa);
+    color: #fff;
+    text-align: center;
+    padding: 40px 10px 50px;
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
 }
-
 
 /* Navigation */
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 18px;
+    margin-top: 20px;
 }
 
 nav a {
-    padding: 6px 14px;
+    padding: 8px 18px;
     text-decoration: none;
-    color: #fff;
-    border: 2px solid #fff;
+    color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 100px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: 0.2s;
+    font-size: 1.05rem;
 }
 
 nav a:hover {
@@ -44,74 +53,64 @@ nav a:hover {
     color: #5271ff;
 }
 
-/* Sections */
+/* Section Container */
 section {
-    margin: 40px auto;
-    padding: 30px 25px;
-    max-width: 850px;
+    padding: 35px 30px;
+    margin: 55px auto;
+    max-width: 900px;
     background: #ffffff;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    border-radius: 12px;
+    border-radius: 18px;
 }
 
+/* Alternate section color (optional) */
 section:nth-of-type(odd) {
-    background: #fafbff;
+    background: #fdfdff;
 }
 
-/* About section */
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.image-container {
-    background-color: #5271ff;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-img.selfie {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-
-/* Typography spacing */
+/* Headings */
 h1, h2, h3 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
+    font-size: 1.9rem;
     color: #2f3bff;
+    letter-spacing: 0.4px;
 }
 
+/* Paragraph spacing */
 p {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
+/* Lists */
 strong {
     display: block;
-    margin-top: 25px;
-    margin-bottom: 8px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 ul li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-hr {
-    border: none;
-    height: 1px;
-    background: #e0e4ff;
-    margin: 30px 0;
+/* About image container */
+.image-container {
+    background-color: #5271ff;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 260px;
+    margin: 0 auto 20px;
+}
+
+.selfie {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 /* Footer */
@@ -119,51 +118,28 @@ footer {
     background: linear-gradient(to right, #ff0800, #f04040);
     color: #fff;
     text-align: center;
-    padding: 12px;
+    padding: 14px;
     width: 100%;
     font-size: 16px;
     position: fixed;
     bottom: 0;
+    left: 0;
 }
 
-/* ------------ RESPONSIVE BREAKPOINTS ------------- */
-
-/* Phones */
+/* Small Screens */
 @media (max-width: 600px) {
     header {
-        font-size: 18px;
-        padding: 15px 5px;
+        padding: 25px 10px 35px;
+        font-size: 22px;
     }
 
     nav a {
-        padding: 5px 10px;
+        padding: 6px 14px;
         font-size: 0.9rem;
     }
 
     section {
-        padding: 15px;
-        margin: 15px auto;
-    }
-
-    .image-container {
-        max-width: 250px;
-    }
-}
-
-/* Desktop improvements */
-@media (min-width: 900px) {
-    header {
-        padding: 40px 20px;
-        font-size: 28px;
-    }
-
-    nav ul {
-        margin-top: 20px;
-    }
-
-    section {
-        max-width: 1000px;
-        margin: 60px auto;
-        padding: 40px 35px;
+        padding: 25px 18px;
+        margin: 30px 10px;
     }
 }
